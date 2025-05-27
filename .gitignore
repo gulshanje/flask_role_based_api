@@ -1,0 +1,7 @@
+__pycache__
+migrations
+static
+templates
+superuser.py
+.env
+notes.txt
