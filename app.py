@@ -27,11 +27,21 @@ CORS(app, resources={
         "expose_headers": ["Authorization"]  
     }
 })
-
+# CORS(app, resources={
+#      r"/login": {
+#         "origins": ["http://localhost:3000", "http://127.0.0.1:3000"],
+#         "methods": ["POST", "OPTIONS"],
+#         "allow_headers": ["Content-Type"]
+#     }
+#     r"/users/*": {"origins": "http://localhost:3000"},
+#     r"/logout": {"origins": "http://localhost:3000"}
+# })
 app.config.from_object(Config)
 
+# Initialize extensions
 db.init_app(app)
-jwt.init_app(app)  
+jwt.init_app(app)  # This must come after db initialization
+
 jwt = JWTManager(app)
 migrate = Migrate(app, db)
 migrate.init_app(app, db)
@@ -63,7 +73,29 @@ def after_request(response):
     response.headers.add('Access-Control-Allow-Methods', 'GET, OPTIONS')
     return response
     
-# add flask init-db
+@app.cli.command('init-db')
+def init_db():
+    """Initialize the database."""
+    with app.app_context():
+        # Drop all tables
+        db.drop_all()
+        
+        # Create all tables
+        db.create_all()
+        
+        # Create admin user if not exists
+        if not User.query.filter_by(email='admin@example.com').first():
+            admin = User(
+                email='admin@example.com',
+                name='Admin',
+                password='admin123',
+                role='admin'
+            )
+            db.session.add(admin)
+            db.session.commit()
+            print("Database initialized with admin user.")
+        else:
+            print("Database already initialized.")
 
 @app.before_request
 def before_request():
@@ -78,19 +110,24 @@ def before_request():
 
 @app.route('/')
 def home():
-    return jsonify({'message': 'Role Based API'})
+    # In your endpoint after @jwt_required
+    # user_data = decode_token_if_valid(request.headers.get('Authorization'))
+    # print(user_data)
+    # return jsonify({'message': 'Role Based API', 'user_data': user_data})
     return render_template('home.html')
 
 @app.route('/profile', methods=['GET'])
 @jwt_required()
 def profile():
     try:
- 
+        # Get the complete token claims
         claims = get_jwt()
         
+        # Verify required claims exist
         if 'sub' not in claims:
             return jsonify({"error": "Missing subject claim"}), 422
             
+        # Get user info from claims
         user_info = {
             'id': claims['sub'],
             'name': claims.get('name'),
@@ -164,16 +201,21 @@ def logout():
 @jwt_required()
 def get_users():
     try:
+        # Get current user claims
         claims = get_jwt()
         
+        # Verify admin access
         if claims.get('role') != 'admin':
             return jsonify({"error": "Admin access required"}), 403
         
+        # Get pagination parameters
         page = request.args.get('page', 1, type=int)
         per_page = request.args.get('per_page', 10, type=int)
         
+        # Query users with pagination
         users = User.query.paginate(page=page, per_page=per_page, error_out=False)
         
+        # Prepare response
         response = {
             'users': [user.to_dict() for user in users.items],
             'total': users.total,
@@ -202,6 +244,7 @@ def get_user(user_id):
     current_user = get_jwt_identity()
     user = User.query.get_or_404(user_id)
     
+    # Check permissions
     if current_user['role'] == User.ROLES['teacher'] and user.role not in [User.ROLES['teacher'], User.ROLES['student']]:
         return jsonify({'message': 'Unauthorized'}), 403
     elif current_user['role'] == User.ROLES['student'] and user.id != current_user['id']:
@@ -242,16 +285,19 @@ def get_user_by_id(user_id):
     try:
         current_user = get_jwt()
         
+        # Admin can access any user
         if current_user.get('role') in ['admin', 0]:
             user = User.query.get_or_404(user_id)
             return jsonify(user.to_dict())
         
+        # Teachers can access themselves and students
         elif current_user.get('role') in ['teacher', 1]:
             requested_user = User.query.get_or_404(user_id)
             if requested_user.role in [User.ROLES['teacher'], User.ROLES['student']]:
                 return jsonify(requested_user.to_dict())
             return jsonify({"message": "Unauthorized access"}), 403
         
+        # Students can only access themselves
         elif current_user.get('id') == user_id:
             user = User.query.get_or_404(user_id)
             return jsonify(user.to_dict())
@@ -269,9 +315,11 @@ def get_user_by_name(name):
         current_user = get_jwt()
         users = User.query.filter(User.name.ilike(f'%{name}%')).all()
         
+        # Admin sees all matching users
         if current_user.get('role') in ['admin', 0]:
             return jsonify([user.to_dict() for user in users])
         
+        # Teachers see teachers and students
         elif current_user.get('role') in ['teacher', 1]:
             filtered_users = [u for u in users if u.role in [
                 User.ROLES['teacher'], 
@@ -280,6 +328,7 @@ def get_user_by_name(name):
             ]
             return jsonify([user.to_dict() for user in filtered_users])
         
+        # Students see only themselves
         else:
             filtered_users = [u for u in users if u.id == current_user.get('id')]
             return jsonify([user.to_dict() for user in filtered_users])
@@ -293,6 +342,7 @@ def update_user(user_id):
     current_user = get_jwt()
     user = User.query.get_or_404(user_id)
     
+    # Check permissions
     if current_user.get('role') in ['teacher', 1] and current_user.get('role') in ['admin', 0]:
         return jsonify({'message': 'Unauthorized'}), 403
     elif current_user.get('role') in ['student', 2] and user.id != current_user['id']:
@@ -300,6 +350,7 @@ def update_user(user_id):
     
     data = request.get_json()
     
+    # Validate data
     valid, errors = validate_user_data(data, partial=True)
     if not valid:
         return jsonify({'errors': errors}), 400
@@ -337,10 +388,12 @@ def partial_update_user(user_id):
 def delete_user(user_id):
     try:
         claims = get_jwt()
-
+        
+        # Check admin access with all possible role representations
         if claims.get('role') not in ['admin', 0, User.ROLES['admin']]:
             return jsonify({"message": "Admin access required"}), 403
-
+        
+        # Prevent self-deletion
         if user_id == claims.get('sub'):
             return jsonify({"message": "Cannot delete yourself"}), 400
             
@@ -362,14 +415,32 @@ def refresh():
     access_token = create_access_token(identity=current_user)
     return jsonify({'access_token': access_token, 'user': user.to_dict()})
 
+# @app.route('/debug-token', methods=['POST'])
+# def debug_token():
+#     try:
+#         token = request.json.get('token')
+#         if not token:
+#             return jsonify({"error": "No token provided"}), 400
+            
+#         # Manual verification
+#         verify_jwt_in_request()
+#         claims = get_jwt_identity()
+#         return jsonify({"claims": claims}), 200
+        
+#     except Exception as e:
+#         return jsonify({
+#             "error": str(e),
+#             "message": "Token verification failed"
+#         }), 422
     
 if __name__ == '__main__':
+    # Check database connection
     try:
         with app.app_context():
             db.engine.connect()
             print("Database connection successful")
             admin = User.query.filter_by(email='admin@example.com').first()
-            
+            print(admin.name) 
     except Exception as e:
         print(f"Database connection failed: {str(e)}")
         exit(1)

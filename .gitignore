@@ -5,3 +5,6 @@ templates
 superuser.py
 .env
 notes.txt
+not.txt
+superuser.py
+run.py
