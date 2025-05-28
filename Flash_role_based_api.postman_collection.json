@@ -1,0 +1,1649 @@
+{
+	"info": {
+		"_postman_id": "701fa2b9-a562-4935-8337-ba322c55aa0c",
+		"name": "Flash_role_based_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45296617"
+	},
+	"item": [
+		{
+			"name": "Test-api",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDE4MSwianRpIjoiYjBlODM1M2EtZTE3MS00NzlhLTg3YTktNTFjZDI3OTg3YTNmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAxODEsImV4cCI6MTc0ODQ1MDk4MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.0qRxX7RPAADBNVnsr7VztVmFd9DJZsQ5TkqySzXqzDM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mursuji.pythonanywhere.com/",
+					"protocol": "https",
+					"host": [
+						"mursuji",
+						"pythonanywhere",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Test-api",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDE4MSwianRpIjoiYjBlODM1M2EtZTE3MS00NzlhLTg3YTktNTFjZDI3OTg3YTNmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAxODEsImV4cCI6MTc0ODQ1MDk4MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.0qRxX7RPAADBNVnsr7VztVmFd9DJZsQ5TkqySzXqzDM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://mursuji.pythonanywhere.com/",
+							"protocol": "https",
+							"host": [
+								"mursuji",
+								"pythonanywhere",
+								"com"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:50:30 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,PUT,POST,DELETE,OPTIONS"
+						},
+						{
+							"key": "X-Clacks-Overhead",
+							"value": "GNU Terry Pratchett"
+						},
+						{
+							"key": "Server",
+							"value": "PythonAnywhere"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "Check your console for database connection status and user table data."
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@example.com\",\r\n    \"password\": \"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:49:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "636"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDE4MSwianRpIjoiYjBlODM1M2EtZTE3MS00NzlhLTg3YTktNTFjZDI3OTg3YTNmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAxODEsImV4cCI6MTc0ODQ1MDk4MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.0qRxX7RPAADBNVnsr7VztVmFd9DJZsQ5TkqySzXqzDM\",\n    \"user\": {\n        \"country\": null,\n        \"created_at\": \"2025-05-27T23:12:18\",\n        \"date_of_birth\": null,\n        \"email\": \"admin@example.com\",\n        \"id\": 1,\n        \"image\": null,\n        \"name\": \"Admin\",\n        \"role\": \"admin\",\n        \"updated_at\": \"2025-05-27T23:12:18\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDU2OCwianRpIjoiNjUyY2E5NmMtZDEwYi00NWQzLWIxZmYtMGNlYjVhMjhjOWM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDA1NjgsImV4cCI6MTc0ODQ1MTM2OCwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.GQQxyZIexVfj-akT25OvIPZ1UhOOFNQnRfsfYqmkSz4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"jukka@jukka.com\",\r\n    \"name\": \"Jukka\",\r\n    \"password\": \"12345\",\r\n    \"date_of_birth\": \"2000-10-01\",\r\n    \"country\": \"Sweden\",\r\n    \"image\":\"\",\r\n    \"role\":\"admin\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDU2OCwianRpIjoiNjUyY2E5NmMtZDEwYi00NWQzLWIxZmYtMGNlYjVhMjhjOWM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDA1NjgsImV4cCI6MTc0ODQ1MTM2OCwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.GQQxyZIexVfj-akT25OvIPZ1UhOOFNQnRfsfYqmkSz4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jukka@jukka.com\",\r\n    \"name\": \"Jukka\",\r\n    \"password\": \"12345\",\r\n    \"date_of_birth\": \"2000-10-01\",\r\n    \"country\": \"Sweden\",\r\n    \"image\":\"\",\r\n    \"role\":\"admin\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:56:23 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "231"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"country\": \"Sweden\",\n    \"created_at\": \"2025-05-28T13:56:24\",\n    \"date_of_birth\": \"2000-10-01\",\n    \"email\": \"jukka@jukka.com\",\n    \"id\": 2,\n    \"image\": \"\",\n    \"name\": \"Jukka\",\n    \"role\": \"admin\",\n    \"updated_at\": \"2025-05-28T13:56:24\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get user list",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDE4MSwianRpIjoiYjBlODM1M2EtZTE3MS00NzlhLTg3YTktNTFjZDI3OTg3YTNmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAxODEsImV4cCI6MTc0ODQ1MDk4MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.0qRxX7RPAADBNVnsr7VztVmFd9DJZsQ5TkqySzXqzDM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODE5MzQ3MiwianRpIjoiZDFiMDJmZmQtMzFjMS00YjlhLThlMTUtZjMxZWRiMzhjOWZlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDgxOTM0NzIsImNzcmYiOiIwZmIwMjM0ZC0xNTI5LTQ5ZTAtOThlZi0xNjkxMGJhNjU2NjIiLCJleHAiOjE3NDgyMDQyNzIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJuYW1lIjoiQWRtaW4iLCJyb2xlIjowfQ.ojH0jGfPrJ-kp__2uieXvOIWoGZcAX1rWEl5CjOSQ3I\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get user list",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDE4MSwianRpIjoiYjBlODM1M2EtZTE3MS00NzlhLTg3YTktNTFjZDI3OTg3YTNmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAxODEsImV4cCI6MTc0ODQ1MDk4MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.0qRxX7RPAADBNVnsr7VztVmFd9DJZsQ5TkqySzXqzDM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODE5MzQ3MiwianRpIjoiZDFiMDJmZmQtMzFjMS00YjlhLThlMTUtZjMxZWRiMzhjOWZlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDgxOTM0NzIsImNzcmYiOiIwZmIwMjM0ZC0xNTI5LTQ5ZTAtOThlZi0xNjkxMGJhNjU2NjIiLCJleHAiOjE3NDgyMDQyNzIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJuYW1lIjoiQWRtaW4iLCJyb2xlIjowfQ.ojH0jGfPrJ-kp__2uieXvOIWoGZcAX1rWEl5CjOSQ3I\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:50:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "337"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"current_page\": 1,\n    \"pages\": 1,\n    \"total\": 1,\n    \"users\": [\n        {\n            \"country\": null,\n            \"created_at\": \"2025-05-27T23:12:18\",\n            \"date_of_birth\": null,\n            \"email\": \"admin@example.com\",\n            \"id\": 1,\n            \"image\": null,\n            \"name\": \"Admin\",\n            \"role\": \"admin\",\n            \"updated_at\": \"2025-05-27T23:12:18\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get user list with Pagination",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDE4MSwianRpIjoiYjBlODM1M2EtZTE3MS00NzlhLTg3YTktNTFjZDI3OTg3YTNmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAxODEsImV4cCI6MTc0ODQ1MDk4MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.0qRxX7RPAADBNVnsr7VztVmFd9DJZsQ5TkqySzXqzDM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODE5MzQ3MiwianRpIjoiZDFiMDJmZmQtMzFjMS00YjlhLThlMTUtZjMxZWRiMzhjOWZlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDgxOTM0NzIsImNzcmYiOiIwZmIwMjM0ZC0xNTI5LTQ5ZTAtOThlZi0xNjkxMGJhNjU2NjIiLCJleHAiOjE3NDgyMDQyNzIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJuYW1lIjoiQWRtaW4iLCJyb2xlIjowfQ.ojH0jGfPrJ-kp__2uieXvOIWoGZcAX1rWEl5CjOSQ3I\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users?page=1&per_page=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get user list with Pagination",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDE4MSwianRpIjoiYjBlODM1M2EtZTE3MS00NzlhLTg3YTktNTFjZDI3OTg3YTNmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAxODEsImV4cCI6MTc0ODQ1MDk4MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.0qRxX7RPAADBNVnsr7VztVmFd9DJZsQ5TkqySzXqzDM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODE5MzQ3MiwianRpIjoiZDFiMDJmZmQtMzFjMS00YjlhLThlMTUtZjMxZWRiMzhjOWZlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDgxOTM0NzIsImNzcmYiOiIwZmIwMjM0ZC0xNTI5LTQ5ZTAtOThlZi0xNjkxMGJhNjU2NjIiLCJleHAiOjE3NDgyMDQyNzIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJuYW1lIjoiQWRtaW4iLCJyb2xlIjowfQ.ojH0jGfPrJ-kp__2uieXvOIWoGZcAX1rWEl5CjOSQ3I\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/users?page=1&per_page=2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:51:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "337"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"current_page\": 1,\n    \"pages\": 1,\n    \"total\": 1,\n    \"users\": [\n        {\n            \"country\": null,\n            \"created_at\": \"2025-05-27T23:12:18\",\n            \"date_of_birth\": null,\n            \"email\": \"admin@example.com\",\n            \"id\": 1,\n            \"image\": null,\n            \"name\": \"Admin\",\n            \"role\": \"admin\",\n            \"updated_at\": \"2025-05-27T23:12:18\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get user by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDM1MywianRpIjoiM2U2MWYzN2EtZTQzZC00MmQwLTg2NjAtOGJiODMyNDBmZTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAzNTMsImV4cCI6MTc0ODQ1MTE1MywiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.RojL0GDnesVKHI2WzRJKvRHWWbEDJt_00_zhNiK2ekg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/id/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "404 - Get user by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDM1MywianRpIjoiM2U2MWYzN2EtZTQzZC00MmQwLTg2NjAtOGJiODMyNDBmZTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAzNTMsImV4cCI6MTc0ODQ1MTE1MywiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.RojL0GDnesVKHI2WzRJKvRHWWbEDJt_00_zhNiK2ekg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/users/id/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"id",
+								"3"
+							]
+						}
+					},
+					"status": "INTERNAL SERVER ERROR",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:52:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "153"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.\"\n}"
+				},
+				{
+					"name": "Get user by ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDM1MywianRpIjoiM2U2MWYzN2EtZTQzZC00MmQwLTg2NjAtOGJiODMyNDBmZTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAzNTMsImV4cCI6MTc0ODQ1MTE1MywiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.RojL0GDnesVKHI2WzRJKvRHWWbEDJt_00_zhNiK2ekg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/users/id/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"id",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:53:06 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "223"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"country\": null,\n    \"created_at\": \"2025-05-27T23:12:18\",\n    \"date_of_birth\": null,\n    \"email\": \"admin@example.com\",\n    \"id\": 1,\n    \"image\": null,\n    \"name\": \"Admin\",\n    \"role\": \"admin\",\n    \"updated_at\": \"2025-05-27T23:12:18\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get user by NAME",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDM1MywianRpIjoiM2U2MWYzN2EtZTQzZC00MmQwLTg2NjAtOGJiODMyNDBmZTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAzNTMsImV4cCI6MTc0ODQ1MTE1MywiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.RojL0GDnesVKHI2WzRJKvRHWWbEDJt_00_zhNiK2ekg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"token\":\"Authorization Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDM1MywianRpIjoiM2U2MWYzN2EtZTQzZC00MmQwLTg2NjAtOGJiODMyNDBmZTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAzNTMsImV4cCI6MTc0ODQ1MTE1MywiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.RojL0GDnesVKHI2WzRJKvRHWWbEDJt_00_zhNiK2ekg\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/name/Admin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"name",
+						"Admin"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get user by NAME",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDM1MywianRpIjoiM2U2MWYzN2EtZTQzZC00MmQwLTg2NjAtOGJiODMyNDBmZTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAzNTMsImV4cCI6MTc0ODQ1MTE1MywiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.RojL0GDnesVKHI2WzRJKvRHWWbEDJt_00_zhNiK2ekg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"Authorization Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDM1MywianRpIjoiM2U2MWYzN2EtZTQzZC00MmQwLTg2NjAtOGJiODMyNDBmZTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAzNTMsImV4cCI6MTc0ODQ1MTE1MywiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.RojL0GDnesVKHI2WzRJKvRHWWbEDJt_00_zhNiK2ekg\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/users/name/Admin",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"name",
+								"Admin"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:54:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "254"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"country\": \"Britain\",\n        \"created_at\": \"2025-05-27T23:12:18\",\n        \"date_of_birth\": null,\n        \"email\": \"admin@example.com\",\n        \"id\": 1,\n        \"image\": null,\n        \"name\": \"Admin\",\n        \"role\": \"admin\",\n        \"updated_at\": \"2025-05-28T13:54:36\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Update User Data",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDM1MywianRpIjoiM2U2MWYzN2EtZTQzZC00MmQwLTg2NjAtOGJiODMyNDBmZTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAzNTMsImV4cCI6MTc0ODQ1MTE1MywiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.RojL0GDnesVKHI2WzRJKvRHWWbEDJt_00_zhNiK2ekg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"country\": \"Britain\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update User Data",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDM1MywianRpIjoiM2U2MWYzN2EtZTQzZC00MmQwLTg2NjAtOGJiODMyNDBmZTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAzNTMsImV4cCI6MTc0ODQ1MTE1MywiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.RojL0GDnesVKHI2WzRJKvRHWWbEDJt_00_zhNiK2ekg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"country\": \"Britain\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/users/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:54:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "228"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"country\": \"Britain\",\n    \"created_at\": \"2025-05-27T23:12:18\",\n    \"date_of_birth\": null,\n    \"email\": \"admin@example.com\",\n    \"id\": 1,\n    \"image\": null,\n    \"name\": \"Admin\",\n    \"role\": \"admin\",\n    \"updated_at\": \"2025-05-28T13:54:36\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Partially Update User Data",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": " application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDU2OCwianRpIjoiNjUyY2E5NmMtZDEwYi00NWQzLWIxZmYtMGNlYjVhMjhjOWM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDA1NjgsImV4cCI6MTc0ODQ1MTM2OCwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.GQQxyZIexVfj-akT25OvIPZ1UhOOFNQnRfsfYqmkSz4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"country\": \"USA\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Partially Update User Data",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDU2OCwianRpIjoiNjUyY2E5NmMtZDEwYi00NWQzLWIxZmYtMGNlYjVhMjhjOWM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDA1NjgsImV4cCI6MTc0ODQ1MTM2OCwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.GQQxyZIexVfj-akT25OvIPZ1UhOOFNQnRfsfYqmkSz4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"country\": \"USA\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/users/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:56:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "228"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://127.0.0.1:3000"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"country\": \"USA\",\n    \"created_at\": \"2025-05-28T13:56:24\",\n    \"date_of_birth\": \"2000-10-01\",\n    \"email\": \"jukka@jukka.com\",\n    \"id\": 2,\n    \"image\": \"\",\n    \"name\": \"Jukka\",\n    \"role\": \"admin\",\n    \"updated_at\": \"2025-05-28T13:56:55\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Protected",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDE4MSwianRpIjoiYjBlODM1M2EtZTE3MS00NzlhLTg3YTktNTFjZDI3OTg3YTNmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAxODEsImV4cCI6MTc0ODQ1MDk4MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.0qRxX7RPAADBNVnsr7VztVmFd9DJZsQ5TkqySzXqzDM",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/protected",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"protected"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Protected",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDE4MSwianRpIjoiYjBlODM1M2EtZTE3MS00NzlhLTg3YTktNTFjZDI3OTg3YTNmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAxODEsImV4cCI6MTc0ODQ1MDk4MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.0qRxX7RPAADBNVnsr7VztVmFd9DJZsQ5TkqySzXqzDM",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/protected",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"protected"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:52:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"logged_in_as\": \"1\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Revoke Token",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDM1MywianRpIjoiM2U2MWYzN2EtZTQzZC00MmQwLTg2NjAtOGJiODMyNDBmZTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAzNTMsImV4cCI6MTc0ODQ1MTE1MywiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.RojL0GDnesVKHI2WzRJKvRHWWbEDJt_00_zhNiK2ekg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/logout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Revoke Token",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDM1MywianRpIjoiM2U2MWYzN2EtZTQzZC00MmQwLTg2NjAtOGJiODMyNDBmZTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAzNTMsImV4cCI6MTc0ODQ1MTE1MywiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.RojL0GDnesVKHI2WzRJKvRHWWbEDJt_00_zhNiK2ekg",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:55:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "90"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"logout_time\": \"2025-05-28T13:55:20.916870\",\n    \"message\": \"Successfully logged out\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Deleted User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODIwMjkyNCwianRpIjoiYjE5YzRlMmEtNTI2Ni00MjBiLWFkMDYtNTk5ZDg4ZTVjYjBhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDgyMDI5MjQsImNzcmYiOiJmMDcwNjcyOC1jYzgyLTQ2MTQtOWM1ZS0zNTYzMWM0YjY3YmYiLCJleHAiOjE3NDgyMTM3MjQsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5jb20iLCJuYW1lIjoiQWRtaW4iLCJyb2xlIjoiYWRtaW4ifQ.KpVDfZAxyCHuHvRJv1Wvwo_e7RyWlnWsa9chw8CGK54",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/users/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDE4MSwianRpIjoiYjBlODM1M2EtZTE3MS00NzlhLTg3YTktNTFjZDI3OTg3YTNmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAxODEsImV4cCI6MTc0ODQ1MDk4MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.0qRxX7RPAADBNVnsr7VztVmFd9DJZsQ5TkqySzXqzDM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Profile",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODQ0MDE4MSwianRpIjoiYjBlODM1M2EtZTE3MS00NzlhLTg3YTktNTFjZDI3OTg3YTNmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg0NDAxODEsImV4cCI6MTc0ODQ1MDk4MSwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsIm5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsInJvbGVfaWQiOjB9.0qRxX7RPAADBNVnsr7VztVmFd9DJZsQ5TkqySzXqzDM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.13.1"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 May 2025 13:51:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "86"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, Authorization"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, OPTIONS"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"admin@example.com\",\n    \"id\": \"1\",\n    \"name\": \"Admin\",\n    \"role\": \"admin\"\n}"
+				}
+			]
+		}
+	]
+}
