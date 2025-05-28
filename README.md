@@ -33,11 +33,13 @@ A comprehensive Flask application with JWT authentication that can be deployed o
 ## API Endpoints
 
 ### Authentication
+
 - `POST /login` - Login and get JWT tokens
 - `POST /refresh` - Refresh access token
 - `DELETE /logout` - Logout (invalidate token)
 
 ### Users
+
 - `GET /users` - List all users (admin only)
 - `POST /users` - Create a new user (admin only)
 - `GET /users/<int:user_id>` - Get user details
@@ -48,6 +50,7 @@ A comprehensive Flask application with JWT authentication that can be deployed o
 - `GET /users/name/<string:name>` - Search users by name (admin only)
 
 ### Utility
+
 - `GET /protected` - Test protected route
 - `GET /test_db` - Test database connection
 
@@ -55,11 +58,11 @@ A comprehensive Flask application with JWT authentication that can be deployed o
 
 ### Login
 
-curl -X POST http://localhost:5000/login \
+curl -X POST <http://localhost:5000/login> \
   -H "Content-Type: application/json" \
-  -d '{"email": "admin@example.com", "password": "admin123"}'
+  -d '{"email": "<admin@example.com>", "password": "admin123"}'
 
 ### Get Users (Admin)
 
-curl -X GET http://localhost:5000/users \
+curl -X GET <http://localhost:5000/users> \
 -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
